@@ -4,6 +4,9 @@ Controls the humidity and UVC (ultra violet germicidal)  light over the internet
 
 ![calciHtmlLogo](photos/1.PNG)
 
+
+![calciHtmlLogo](photos/10.PNG)
+
 # Story
 1. **Introduction** 
 1) In more humid condition the droplets containing virus come from sneezing or coughing come down to floor quickly and within few minutes drop containing virus settle to floor and hence virus transmission reduces so much.
@@ -70,6 +73,7 @@ To use DHT11 we have to use install a library in arduino IDE
 Sketch -> Include Library ->Manage Libraries
 2.	 Install the library 
 
+![calciHtmlLogo](photos/2.PNG)
 
 **Connections**
 
@@ -132,6 +136,9 @@ And we use the code below to get humidity value and send it to bolt cloud with h
 Go to bolt cloud and select a new product of UART and input device.
 Now set the product as below
 
+
+![calciHtmlLogo](photos/3.PNG)
+
 Now chose file extention as Js and code as below
 
                 setChartLibrary('google-chart');
@@ -139,12 +146,17 @@ Now chose file extention as Js and code as below
                 setChartType('lineGraph');
                 setAxisName('time','humidity');
                 plotChart('time_stamp','humidity');
+                
+                
+
+![calciHtmlLogo](photos/4.PNG)
 Now cloud is ready to use and to plot the humidity with time.
 
 **4.  Making of webpage**
 We have to make a Webpage to access the bolt Wi-Fi module and turning on/off UV light and humidity maker with the help of relays and they are supply by ac at our home and other places.
 
 
+![calciHtmlLogo](photos/5.PNG)
 
 Input of relays connected with GPIO 1 and 2 of bolt module to monitor UV light and humidity maker.
 Below is the html code of webpage with buttons on it to switch the UV light and humidity maker.
