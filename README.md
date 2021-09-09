@@ -25,7 +25,6 @@ Hardware components
 
 # Story
 1. **Introduction** 
-
 1) In more humid condition the droplets containing virus come from sneezing or coughing come down to floor quickly and within few minutes drop containing virus settle to floor and hence virus transmission reduces so much.
 But in low humidity condition the drops containing the virus long last about hours.
  2) UV light has been used for years to kill bacteria and viruses and ultraviolet light has been used as a disinfectant for a century in hospitals and water supplies. It shatters the genetic material inside viruses, bacteria and other microbes. Menachery said, and disinfecting UV light can’t be used with people around because it damages human cells.
@@ -40,6 +39,24 @@ UV light is lethal to viruses because of its high frequency that scramble and da
 https://www.washingtonpost.com/graphics/2020/health/coronavirus-sars-cov-2-structure/
 2. Does UV Light Kill Viruses and Germs?( MAR. 19, 2020)
 (By Liza Corsillo) https://nymag.com/strategist/article/does-uv-light-kill-germs-best-sterilizer.html
+
+
+**Demonstration** 
+1.	Checking humidity reading from Bolt android app.               
+2.	Controlling humidity and UV light over the internet.
+
+# Steps for building the project
+**1.	Connecting bolt Wi-Fi module with arduino**
+To connect bolt device to arduino first install the Bolt arduino helper library in arduino IDE you may check the complete guide on this link https://docs.boltiot.com/docs/arduino-library.
+
+Now connections 
+
+      Bolt device    arduino
+        Tx---->       Rx(D0)
+        Rx---->       Tx(D1)
+        5V---->       5V
+        GND--->       GND
+
 
 
 
