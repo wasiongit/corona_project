@@ -61,6 +61,37 @@ Now connections
         5V---->       5V
         GND--->       GND
 
+**2.	Getting humidity reading from arduino**
+To get humidity value we use DHT11 sensor and connect to arduino digital pin 2 to take the value as it gives value in digital output.
+Library installation
+
+To use DHT11 we have to use install a library in arduino IDE 
+1.	 Open arduino IDE and Click on 
+Sketch -> Include Library ->Manage Libraries
+2.	 Install the library 
 
 
+**Connections**
 
+                    DHT11          arduino
+          Output (DATA)   ---->    pin2 (D2)
+          Power pin (VDD) ---->    5V 
+          GND             ---->    GND
+
+Connect power pin of DHT11 to 5V and GND to GND.
+And we use the code below to get humidity value and send it to bolt cloud with help of the command boltiot.processPushDataCommand()
+
+
+**3.	Configure the bolt cloud and product**
+
+Go to bolt cloud and select a new product of UART and input device.
+Now set the product as below
+
+Now chose file extention as Js and code as below
+
+                setChartLibrary('google-chart');
+                setChartTitle('Humidity Monitring');
+                setChartType('lineGraph');
+                setAxisName('time','humidity');
+                plotChart('time_stamp','humidity');
+Now cloud is ready to use and to plot the humidity with time.
