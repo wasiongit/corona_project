@@ -1,4 +1,4 @@
-# corona project
+# Corona Project
 Controls the humidity and UVC (ultra violet germicidal)  light over the internet to sanitize our home and working  places and reduce the risk of covid-19.
 
 
@@ -191,4 +191,31 @@ Note: Remember to provide API key and device ID respectively in setKey() functio
                         </body>
                         </html>
 
+**5.	Circuit connection**
+
+![calciHtmlLogo](photos/6.PNG)
+
+
+
+**6.	Device Installation setup**
+![calciHtmlLogo](photos/5.PNG)
+
+# Controlling
+**Procedure to use my system **
+
+**1.	Checking humidity status **
+Check current status of humidity in your home through bolt IOT app which linked with bolt Wi-Fi module.
+
+![calciHtmlLogo](photos/7.PNG)
+
+
+**2.	Now open the webpage that we have created ….**
+
+
+![calciHtmlLogo](photos/8.PNG)
+
+**3.	Increasing of humidity:**
+Switch on the humidity maker by clicking on button under humidity control.
+To control UV light:
+To control UV light use buttons under UV light to on/off the light.
 
