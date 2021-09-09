@@ -4,25 +4,6 @@ Controls the humidity and UVC (ultra violet germicidal)  light over the internet
 
 ![calciHtmlLogo](photos/1.PNG)
 
-# Things used in this project
-Hardware components
-1. Bolt IOT Wi-Fi module
-2. Arduino Uno
-3. Relay (2)
-4. Breadboard
-5. Humidity sensor (DHT11)
-6. Humidity maker
-7. Exhaust fan
-8.  UVC (ultra violet germicidal)
-
-
-**Software/apps and online services**
-1. Bolt IOT android app
-2. Fritzing 
-3. Webpage(our web application)
-
-
-
 # Story
 1. **Introduction** 
 1) In more humid condition the droplets containing virus come from sneezing or coughing come down to floor quickly and within few minutes drop containing virus settle to floor and hence virus transmission reduces so much.
@@ -44,6 +25,29 @@ https://www.washingtonpost.com/graphics/2020/health/coronavirus-sars-cov-2-struc
 **Demonstration** 
 1.	Checking humidity reading from Bolt android app.               
 2.	Controlling humidity and UV light over the internet.
+
+
+
+# Things used in this project
+Hardware components
+1. Bolt IOT Wi-Fi module
+2. Arduino Uno
+3. Relay (2)
+4. Breadboard
+5. Humidity sensor (DHT11)
+6. Humidity maker
+7. Exhaust fan
+8.  UVC (ultra violet germicidal)
+
+
+**Software/apps and online services**
+1. Bolt IOT android app
+2. Fritzing 
+3. Webpage(our web application)
+
+
+
+
 
 # Steps for building the project
 **1.	Connecting bolt Wi-Fi module with arduino**
