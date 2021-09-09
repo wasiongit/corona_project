@@ -95,3 +95,43 @@ Now chose file extention as Js and code as below
                 setAxisName('time','humidity');
                 plotChart('time_stamp','humidity');
 Now cloud is ready to use and to plot the humidity with time.
+
+**4.  Making of webpage**
+We have to make a Webpage to access the bolt Wi-Fi module and turning on/off UV light and humidity maker with the help of relays and they are supply by ac at our home and other places.
+
+
+
+Input of relays connected with GPIO 1 and 2 of bolt module to monitor UV light and humidity maker.
+Below is the html code of webpage with buttons on it to switch the UV light and humidity maker.
+We have to save the below code with file extention .html and open it in a browser to connect to our device and control the UV light and Humidity maker.
+Note: Remember to provide API key and device ID respectively in setKey() function below in the code
+
+
+                        <!DOCTYPE html>
+                        <html>
+                        <head>
+                            <title>home protection</title>
+                            <script type="text/javascript" src="https://cloud.boltiot.com/static/js/boltCommands.js"></script>
+                                <script>
+                                setKey('xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx','BOLTxxxxxxxx');
+                                </script>
+                        </head>
+                        <body >
+                        	<center><h1>UV light</h1></center>
+                            <center>
+                            	<div><button onClick="digitalWrite(1,HIGH);" style="height: 50px;width: 100px"><h2>on</h2></button>
+                            <button onClick="digitalWrite(1,LOW);" style="height: 50px;width: 100px"><h2>off</h2></button>
+                            </div>
+                            </br>
+                            </br>
+                            <center><h1>Humidity control</h1></center>
+                        
+                                <div><button  onClick="digitalWrite(2,HIGH);"  style="height: 50px;width: 100px"><h2>on</h2></button>
+                                <button onClick="digitalWrite(2,LOW);" style="height: 50px;width: 100px"><h2>off</h2></button>
+                                </div>
+                            </center>
+                        
+                        </body>
+                        </html>
+
+
