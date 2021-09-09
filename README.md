@@ -82,6 +82,51 @@ Connect power pin of DHT11 to 5V and GND to GND.
 And we use the code below to get humidity value and send it to bolt cloud with help of the command boltiot.processPushDataCommand()
 
 
+
+
+                #include <SimpleDHT.h>
+                #include <BoltIoT-Arduino-Helper.h>
+                // for DHT11, 
+                //      VCC: 5V or 3V
+                //      GND: GND
+                //      DATA: 2
+                //---------------------------------------------setting digital pin 2 as input------------------------------------------------------
+                int pinDHT11 = 2;
+                //-----------------------------calling the simpleDHT11 function and passing the variable in function-----------------------------
+                SimpleDHT11 dht11(pinDHT11);
+                //----------------------------------declaring API_KEY  key and device ID------------------------------------------------------------
+                //---------------NOTE-----insert API and bolt device ID below in the mentioned field-------------------------------------------- 
+                #ifndef API_KEY
+                #define API_KEY   " xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx "
+                #endif
+                #ifndef DEVICE_ID
+                #define DEVICE_ID "BOLTXXXXXX"
+                #endif
+                
+                void setup() {
+                boltiot.begin(Serial);
+                }
+                //--------------------------------------collecting Data from DHT11----------------------------------------------------------
+                void loop() {
+                  // start working...
+                  // read without samples.
+                  byte temperature = 0;
+                  byte humidity = 0;
+                  int err = SimpleDHTErrSuccess;
+                  if ((err = dht11.read(&temperature, &humidity, NULL)) != SimpleDHTErrSuccess) {
+                    delay(1000);
+                    return;
+                  }
+                //------------------------converting byte value to integer value and assigning it to new variable------------------------------
+                 int hum= (int)humidity;
+                
+                  // DHT11 sampling rate is 1HZ.
+                //---------------------------------------------------------------sending data to bolt cloud----------------------------
+                  boltiot.processPushDataCommand(hum);
+                  delay(1500);}
+
+
+
 **3.	Configure the bolt cloud and product**
 
 Go to bolt cloud and select a new product of UART and input device.
