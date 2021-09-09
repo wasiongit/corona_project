@@ -201,9 +201,12 @@ Note: Remember to provide API key and device ID respectively in setKey() functio
 ![calciHtmlLogo](photos/5.PNG)
 
 # Controlling
-**Procedure to use my system **
 
-**1.	Checking humidity status **
+
+
+**Procedure to use my system**
+
+**1.	Checking humidity status**
 Check current status of humidity in your home through bolt IOT app which linked with bolt Wi-Fi module.
 
 ![calciHtmlLogo](photos/7.PNG)
